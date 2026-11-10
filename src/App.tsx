@@ -1,16 +1,23 @@
+import { useGetProductsQuery } from './api/baseApi'
 import './App.css'
 import { Header } from './components/Header'
 import { ProductList } from './components/ProductList'
-import { products } from './data/products'
-
+import { RegisterForm } from './components/RegisterForm'
 
 function App() {
-  
-  console.log("Hello world")
+  const { data } = useGetProductsQuery();
+
+  // if (!data) {
+  //   return (
+  //     <h1>Products are not found</h1>
+  //   )
+  // }
+  // console.log("Hello world")
   return (
     <main> 
       <Header title="Product Catalog" description="Наш перший фронтенд на React + Typescript"/>
-      <ProductList products = {products}/>
+      <RegisterForm />
+      {/* <ProductList products = {data}/> */}
     </main>
   )
 }

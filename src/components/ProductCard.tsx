@@ -1,7 +1,7 @@
-import type { Product } from "../types/product";
+import type { ProductWithCategory } from "../types/product";
 
 interface ProductCardProps {
-    product: Product
+    product: ProductWithCategory
 }
 
 export function ProductCard(props: ProductCardProps) {
@@ -15,7 +15,7 @@ export function ProductCard(props: ProductCardProps) {
         <div>
             <p>{name}</p>
             <p>{price}$</p>
-            <p>{category}</p>
+            <p>{category.name}</p>
         </div>
     )
 }

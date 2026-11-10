@@ -1,8 +1,8 @@
-import type { Product } from "../types/product"
+import type { ProductWithCategory } from "../types/product"
 import { ProductCard } from "./ProductCard"
 
 interface ProductListProps {
-    products: Product[]
+    products: ProductWithCategory[]
 }
 
 export function ProductList(props: ProductListProps){

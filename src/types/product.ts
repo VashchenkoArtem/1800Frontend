@@ -1,7 +1,11 @@
-export type Product = {
+export type ProductWithCategory = {
     id: number,
     name: string,
     price: number,
     image: string,
-    category: string
+    categoryId: number,
+    category: {
+        id: number,
+        name: string
+    }
 }
